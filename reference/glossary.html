@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x7CB5;</text></svg>">
+<title>Cantonese Glossary - Learn Cantonese</title>
+<link rel="stylesheet" href="../css/course.css">
+<style>
+  dl { margin: 1rem 0 2rem; }
+  dt {
+    font-family: 'Courier New', monospace;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-top: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  dt .chars {
+    font-family: Georgia, serif;
+    font-size: 1.1rem;
+    color: var(--fg);
+  }
+  dd {
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--muted);
+  }
+  .avoid dt { opacity: 0.5; }
+  .avoid dd { opacity: 0.5; font-style: italic; }
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2rem 0;
+  }
+</style>
+<script src="../js/theme.js"></script>
+<script src="../js/animations.js"></script>
+</head>
+<body>
+
+<nav class="lesson-nav">
+  <a href="../index.html">&larr; Hub</a>
+  <a href="../index.html" class="nav-hub">Learn Cantonese</a>
+  <a href="tone-chart.html">Tone Chart &rarr;</a>
+</nav>
+
+<div class="lesson-header">
+  <h1>Cantonese Glossary</h1>
+  <p class="subtitle">All vocabulary from the course, organized by topic</p>
+</div>
+
+<!-- Romanization -->
+<h2>Romanization</h2>
+<dl>
+  <dt>Jyutping</dt>
+  <dd>The standard romanization system for Cantonese. Uses letters a-z for sounds plus a number 1-6 for tone. Example: nei5 = consonant "n" + vowel "ei" + tone 5.</dd>
+
+  <dt>Tone number</dt>
+  <dd>The digit 1-6 at the end of a Jyutping syllable. It tells you the pitch pattern to use when speaking. Without the correct tone, you say a different word entirely.</dd>
+</dl>
+
+<hr class="section-divider">
+
+<!-- Tone Concepts -->
+<h2>Tone Concepts</h2>
+<dl>
+  <dt>Tone 1 &mdash; High Level <span class="chars">--- ---</span></dt>
+  <dd>High, flat pitch. Like singing a steady "la!" Anchor word: saam1 (&#19977;, three).</dd>
+
+  <dt>Tone 2 &mdash; High Rising <span class="chars">&#x2571;</span></dt>
+  <dd>Starts mid, rises to high. Like asking "Really?" Anchor word: gau2 (&#20061;, nine).</dd>
+
+  <dt>Tone 3 &mdash; Mid Level <span class="chars">--- ---</span></dt>
+  <dd>Middle pitch, flat. Your normal speaking voice. Anchor word: sei3 (&#22235;, four).</dd>
+
+  <dt>Tone 4 &mdash; Low Falling <span class="chars">&#x2572;</span></dt>
+  <dd>Starts mid, drops low. Like sighing "oh..." Anchor word: si4 (&#26178;, time).</dd>
+
+  <dt>Tone 5 &mdash; Low Rising <span class="chars">&#x2571;</span></dt>
+  <dd>Starts low, rises to mid. A soft, curious "hmm?" Anchor word: nei5 (&#20320;, you).</dd>
+
+  <dt>Tone 6 &mdash; Low Level <span class="chars">--- ---</span></dt>
+  <dd>Low, flat pitch. A bored mumble. Anchor word: ji6 (&#20108;, two).</dd>
+</dl>
+
+<hr class="section-divider">
+
+<!-- Greetings & Goodbyes -->
+<h2>Greetings &amp; Goodbyes</h2>
+<dl>
+  <dt>nei5 hou2 <span class="chars">(&#20320;&#22909;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#20320;&#22909;', 5)">&#128264; Hear</button></dt>
+  <dd>Hello</dd>
+
+  <dt>zou2 san4 <span class="chars">(&#26089;&#26216;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#26089;&#26216;', 2)">&#128264; Hear</button></dt>
+  <dd>Good morning</dd>
+
+  <dt>maan5 on1 <span class="chars">(&#26202;&#23433;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#26202;&#23433;', 5)">&#128264; Hear</button></dt>
+  <dd>Good night</dd>
+
+  <dt>baai1 baai3 <span class="chars">(&#25308;&#25308;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#25308;&#25308;', 1)">&#128264; Hear</button></dt>
+  <dd>Bye bye</dd>
+
+  <dt>joi3 gin3 <span class="chars">(&#20877;&#35211;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#20877;&#35211;', 3)">&#128264; Hear</button></dt>
+  <dd>See you again / goodbye</dd>
+
+  <dt>nei5 hou2 maa3 <span class="chars">(&#20320;&#22909;&#21966;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#20320;&#22909;&#21966;', 5)">&#128264; Hear</button></dt>
+  <dd>How are you?</dd>
+
+  <dt>ngo5 gei2 hou2 <span class="chars">(&#25105;&#24190;&#22909;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#25105;&#24190;&#22909;', 5)">&#128264; Hear</button></dt>
+  <dd>I'm pretty good</dd>
+</dl>
+
+<hr class="section-divider">
+
+<!-- Pronouns -->
+<h2>Pronouns</h2>
+<dl>
+  <dt>ngo5 <span class="chars">(&#25105;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#25105;', 5)">&#128264; Hear</button></dt>
+  <dd>I / me</dd>
+
+  <dt>nei5 <span class="chars">(&#20320;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#20320;', 5)">&#128264; Hear</button></dt>
+  <dd>You</dd>
+
+  <dt>keoi5 <span class="chars">(&#20322;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#20322;', 5)">&#128264; Hear</button></dt>
+  <dd>He / she / it</dd>
+
+  <dt>ngo5 dei6 <span class="chars">(&#25105;&#21707;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#25105;&#21707;', 5)">&#128264; Hear</button></dt>
+  <dd>We / us</dd>
+
+  <dt>nei5 dei6 <span class="chars">(&#20320;&#21707;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#20320;&#21707;', 5)">&#128264; Hear</button></dt>
+  <dd>You (plural)</dd>
+
+  <dt>keoi5 dei6 <span class="chars">(&#20322;&#21707;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#20322;&#21707;', 5)">&#128264; Hear</button></dt>
+  <dd>They / them</dd>
+</dl>
+
+<hr class="section-divider">
+
+<!-- Key Verbs -->
+<h2>Key Verbs</h2>
+<dl>
+  <dt>hai6 <span class="chars">(&#20418;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#20418;', 6)">&#128264; Hear</button></dt>
+  <dd>To be</dd>
+
+  <dt>sik6 <span class="chars">(&#39135;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#39135;', 6)">&#128264; Hear</button></dt>
+  <dd>To eat</dd>
+
+  <dt>oi3 <span class="chars">(&#24859;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#24859;', 3)">&#128264; Hear</button></dt>
+  <dd>To love</dd>
+
+  <dt>gin3 <span class="chars">(&#35211;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#35211;', 3)">&#128264; Hear</button></dt>
+  <dd>To see</dd>
+</dl>
+
+<hr class="section-divider">
+
+<!-- Particles -->
+<h2>Particles</h2>
+<dl>
+  <dt>ge3 <span class="chars">(&#22021;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#22021;', 3)">&#128264; Hear</button></dt>
+  <dd>Possessive particle (ngo5 ge3 = my)</dd>
+
+  <dt>maa3 <span class="chars">(&#21966;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#21966;', 3)">&#128264; Hear</button></dt>
+  <dd>Question particle &mdash; turns a statement into a yes/no question</dd>
+
+  <dt>m4 <span class="chars">(&#21780;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#21780;', 4)">&#128264; Hear</button></dt>
+  <dd>Negation &mdash; placed before a verb to mean "not"</dd>
+
+  <dt>dei6 <span class="chars">(&#21707;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#21707;', 6)">&#128264; Hear</button></dt>
+  <dd>Plural marker for pronouns (ngo5 dei6 = we)</dd>
+</dl>
+
+<hr class="section-divider">
+
+<!-- Numbers 1-10 -->
+<h2>Numbers 1&ndash;10</h2>
+<dl>
+  <dt>jat1 <span class="chars">(&#19968;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#19968;', 1)">&#128264; Hear</button></dt>
+  <dd>One</dd>
+
+  <dt>ji6 <span class="chars">(&#20108;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#20108;', 6)">&#128264; Hear</button></dt>
+  <dd>Two</dd>
+
+  <dt>saam1 <span class="chars">(&#19977;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#19977;', 1)">&#128264; Hear</button></dt>
+  <dd>Three</dd>
+
+  <dt>sei3 <span class="chars">(&#22235;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#22235;', 3)">&#128264; Hear</button></dt>
+  <dd>Four</dd>
+
+  <dt>ng5 <span class="chars">(&#20116;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#20116;', 5)">&#128264; Hear</button></dt>
+  <dd>Five</dd>
+
+  <dt>luk6 <span class="chars">(&#20845;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#20845;', 6)">&#128264; Hear</button></dt>
+  <dd>Six</dd>
+
+  <dt>cat1 <span class="chars">(&#19971;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#19971;', 1)">&#128264; Hear</button></dt>
+  <dd>Seven</dd>
+
+  <dt>baat3 <span class="chars">(&#20843;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#20843;', 3)">&#128264; Hear</button></dt>
+  <dd>Eight</dd>
+
+  <dt>gau2 <span class="chars">(&#20061;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#20061;', 2)">&#128264; Hear</button></dt>
+  <dd>Nine</dd>
+
+  <dt>sap6 <span class="chars">(&#21313;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#21313;', 6)">&#128264; Hear</button></dt>
+  <dd>Ten</dd>
+</dl>
+
+<hr class="section-divider">
+
+<!-- Family -->
+<h2>Family</h2>
+<dl>
+  <dt>baa4 baa1 <span class="chars">(&#29240;&#29240;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#29240;&#29240;', 4)">&#128264; Hear</button></dt>
+  <dd>Dad</dd>
+
+  <dt>maa4 maa1 <span class="chars">(&#23229;&#23229;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#23229;&#23229;', 4)">&#128264; Hear</button></dt>
+  <dd>Mom</dd>
+
+  <dt>go1 go1 <span class="chars">(&#21733;&#21733;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#21733;&#21733;', 1)">&#128264; Hear</button></dt>
+  <dd>Older brother</dd>
+
+  <dt>ze2 ze1 <span class="chars">(&#22986;&#22986;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#22986;&#22986;', 2)">&#128264; Hear</button></dt>
+  <dd>Older sister</dd>
+
+  <dt>dai6 dai2 <span class="chars">(&#24351;&#24351;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#24351;&#24351;', 6)">&#128264; Hear</button></dt>
+  <dd>Younger brother</dd>
+
+  <dt>mui4 mui2 <span class="chars">(&#22969;&#22969;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#22969;&#22969;', 4)">&#128264; Hear</button></dt>
+  <dd>Younger sister</dd>
+
+  <dt>lou5 gung1 <span class="chars">(&#32769;&#20844;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#32769;&#20844;', 5)">&#128264; Hear</button></dt>
+  <dd>Husband</dd>
+
+  <dt>lou5 po4 <span class="chars">(&#32769;&#23110;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#32769;&#23110;', 5)">&#128264; Hear</button></dt>
+  <dd>Wife</dd>
+</dl>
+
+<hr class="section-divider">
+
+<!-- Phrases -->
+<h2>Phrases</h2>
+<dl>
+  <dt>do1 ze6 <span class="chars">(&#22810;&#35613;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#22810;&#35613;', 1)">&#128264; Hear</button></dt>
+  <dd>Thank you (for a gift or favour)</dd>
+
+  <dt>m4 goi1 <span class="chars">(&#21780;&#35442;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#21780;&#35442;', 4)">&#128264; Hear</button></dt>
+  <dd>Thank you (for service) / excuse me</dd>
+
+  <dt>ngo5 oi3 nei5 <span class="chars">(&#25105;&#24859;&#20320;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#25105;&#24859;&#20320;', 5)">&#128264; Hear</button></dt>
+  <dd>I love you</dd>
+
+  <dt>hai6 m4 hai6 <span class="chars">(&#20418;&#21780;&#20418;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#20418;&#21780;&#20418;', 6)">&#128264; Hear</button></dt>
+  <dd>Is it or isn't it? (A-not-A question)</dd>
+
+  <dt>hou2 m4 hou2 <span class="chars">(&#22909;&#21780;&#22909;)</span>
+    <button class="hear-btn" onclick="speakCantonese('&#22909;&#21780;&#22909;', 2)">&#128264; Hear</button></dt>
+  <dd>Good or not good? (A-not-A question)</dd>
+</dl>
+
+<div class="source">
+  Last updated: Lesson 10
+</div>
+
+<div class="lesson-footer">
+  <a href="../index.html">&larr; Course Hub</a>
+  <a href="tone-chart.html">Tone Chart &rarr;</a>
+</div>
+
+<script src="../js/audio.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x7CB5;</text></svg>">
+<title>Learn Cantonese</title>
+<link rel="stylesheet" href="css/course.css">
+<style>
+  body { padding-top: 1.5rem; }
+  .hub-content { opacity: 0; transition: opacity 0.5s ease; }
+  .hub-content.show { opacity: 1; }
+
+  .hub-header {
+    text-align: center;
+    padding: 2.5rem 0 2rem;
+    border-bottom: 2px solid var(--fg);
+    margin-bottom: 2rem;
+  }
+  .hub-header h1 {
+    font-size: 2.4rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.03em;
+  }
+  .hub-lang {
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+  }
+  .hub-header .mission {
+    color: var(--muted);
+    font-style: italic;
+    max-width: 480px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+  }
+
+  .stats-row {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    justify-content: center;
+  }
+  .stat-card {
+    text-align: center;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    flex: 1;
+    max-width: 180px;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: hubStatIn 0.5s ease forwards;
+  }
+  .stat-card:nth-child(1) { animation-delay: 0.1s; }
+  .stat-card:nth-child(2) { animation-delay: 0.2s; }
+  .stat-card:nth-child(3) { animation-delay: 0.3s; }
+  @keyframes hubStatIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .stat-number {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1.2;
+  }
+  .stat-label {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+  }
+
+  .today-card {
+    background: var(--highlight);
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    padding: 1.2rem 1.5rem;
+    text-align: center;
+    margin: 1.5rem 0 2rem;
+  }
+  .today-card .today-label {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-bottom: 0.3rem;
+  }
+  .today-card a {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .today-card .today-sub {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 0.3rem;
+  }
+  .today-card.all-done {
+    border-color: #27ae60;
+    background: #f0faf0;
+  }
+
+  .phase-section { margin-bottom: 2.5rem; }
+
+  .lesson-item {
+    opacity: 0;
+    transform: translateX(-10px);
+    animation: lessonSlideIn 0.35s ease forwards;
+  }
+  .phase-1 .lesson-item:nth-child(1) { animation-delay: 0.05s; }
+  .phase-1 .lesson-item:nth-child(2) { animation-delay: 0.1s; }
+  .phase-1 .lesson-item:nth-child(3) { animation-delay: 0.15s; }
+  .phase-1 .lesson-item:nth-child(4) { animation-delay: 0.2s; }
+  .phase-1 .lesson-item:nth-child(5) { animation-delay: 0.25s; }
+  .phase-2 .lesson-item:nth-child(1) { animation-delay: 0.3s; }
+  .phase-2 .lesson-item:nth-child(2) { animation-delay: 0.35s; }
+  .phase-2 .lesson-item:nth-child(3) { animation-delay: 0.4s; }
+  .phase-2 .lesson-item:nth-child(4) { animation-delay: 0.45s; }
+  .phase-2 .lesson-item:nth-child(5) { animation-delay: 0.5s; }
+  @keyframes lessonSlideIn {
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @media (max-width: 500px) {
+    .hub-header h1 { font-size: 1.8rem; }
+    .hub-header { padding: 1.5rem 0 1.2rem; }
+    .stat-card { padding: 0.6rem 0.5rem; }
+    .stat-number { font-size: 1.4rem; }
+    .stats-row { gap: 0.5rem; }
+    .today-card { padding: 1rem; }
+    .today-card a { font-size: 1rem; }
+    .ref-links { gap: 0.3rem; }
+    .ref-link { padding: 0.4rem 0.7rem; font-size: 0.8rem; }
+  }
+  @media (max-width: 360px) {
+    .stats-row { flex-direction: column; align-items: stretch; }
+    .stat-card { max-width: none; }
+  }
+</style>
+<script src="js/theme.js"></script>
+</head>
+<body>
+
+<!-- Splash screen -->
+<div class="splash" id="splash">
+  <div class="splash-char">粵</div>
+  <div class="splash-title">Learn Cantonese</div>
+  <div class="splash-sub">gwong2 dung1 waa2</div>
+</div>
+
+<!-- Main content (hidden until splash finishes) -->
+<div class="hub-content" id="hubContent">
+
+<div class="hub-header">
+  <div class="hub-lang">gwong2 dung1 waa2</div>
+  <h1>Learn Cantonese</h1>
+  <p class="mission">Conversational Cantonese for connecting with your partner and their family.</p>
+</div>
+
+<div class="stats-row">
+  <div class="stat-card">
+    <div class="stat-number" id="lessonsNum">0</div>
+    <div class="stat-label">Lessons done</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number" id="wordsNum">0</div>
+    <div class="stat-label">Words learned</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number" id="streakNum">0</div>
+    <div class="stat-label">Day streak</div>
+  </div>
+</div>
+
+<div class="progress-bar-container">
+  <div class="progress-bar-fill" id="progressFill" style="width:0%"></div>
+</div>
+
+<div id="todayCard" class="today-card">
+  <div class="today-label">Today</div>
+  <div id="todayContent"></div>
+</div>
+
+<div class="phase-section phase-1">
+  <span class="phase-title">Phase 1 &mdash; Tones</span>
+  <ul class="lesson-list" id="phase1List">
+    <li class="lesson-item" data-lesson="0001" data-href="lessons/0001-tones-and-first-words.html" data-title="Tones Are Everything">
+      <a href="lessons/0001-tones-and-first-words.html">
+        <span class="lesson-num-badge">1</span>
+        <span class="lesson-title">Tones Are Everything</span>
+      </a>
+      <span class="lesson-score" data-score="0001"></span>
+      <span class="lesson-check" data-check="0001"></span>
+    </li>
+    <li class="lesson-item" data-lesson="0002" data-href="lessons/0002-three-shelves.html" data-title="Three Shelves">
+      <a href="lessons/0002-three-shelves.html">
+        <span class="lesson-num-badge">2</span>
+        <span class="lesson-title">Three Shelves</span>
+      </a>
+      <span class="lesson-score" data-score="0002"></span>
+      <span class="lesson-check" data-check="0002"></span>
+    </li>
+    <li class="lesson-item" data-lesson="0003" data-href="lessons/0003-rising-tones.html" data-title="Rising Tones">
+      <a href="lessons/0003-rising-tones.html">
+        <span class="lesson-num-badge">3</span>
+        <span class="lesson-title">Rising Tones</span>
+      </a>
+      <span class="lesson-score" data-score="0003"></span>
+      <span class="lesson-check" data-check="0003"></span>
+    </li>
+    <li class="lesson-item" data-lesson="0004" data-href="lessons/0004-low-falling-tone.html" data-title="The Low Falling Tone">
+      <a href="lessons/0004-low-falling-tone.html">
+        <span class="lesson-num-badge">4</span>
+        <span class="lesson-title">The Low Falling Tone</span>
+      </a>
+      <span class="lesson-score" data-score="0004"></span>
+      <span class="lesson-check" data-check="0004"></span>
+    </li>
+    <li class="lesson-item" data-lesson="0005" data-href="lessons/0005-all-six-tones-together.html" data-title="All Six Tones Together">
+      <a href="lessons/0005-all-six-tones-together.html">
+        <span class="lesson-num-badge">5</span>
+        <span class="lesson-title">All Six Tones Together</span>
+      </a>
+      <span class="lesson-score" data-score="0005"></span>
+      <span class="lesson-check" data-check="0005"></span>
+    </li>
+  </ul>
+</div>
+
+<div class="phase-section phase-2">
+  <span class="phase-title">Phase 2 &mdash; Building Blocks</span>
+  <ul class="lesson-list" id="phase2List">
+    <li class="lesson-item" data-lesson="0006" data-href="lessons/0006-greetings-and-goodbyes.html" data-title="Greetings &amp; Goodbyes">
+      <a href="lessons/0006-greetings-and-goodbyes.html">
+        <span class="lesson-num-badge">6</span>
+        <span class="lesson-title">Greetings &amp; Goodbyes</span>
+      </a>
+      <span class="lesson-score" data-score="0006"></span>
+      <span class="lesson-check" data-check="0006"></span>
+    </li>
+    <li class="lesson-item" data-lesson="0007" data-href="lessons/0007-pronouns-and-to-be.html" data-title="Pronouns &amp; To Be">
+      <a href="lessons/0007-pronouns-and-to-be.html">
+        <span class="lesson-num-badge">7</span>
+        <span class="lesson-title">Pronouns &amp; "To Be"</span>
+      </a>
+      <span class="lesson-score" data-score="0007"></span>
+      <span class="lesson-check" data-check="0007"></span>
+    </li>
+    <li class="lesson-item" data-lesson="0008" data-href="lessons/0008-numbers-one-to-ten.html" data-title="Numbers 1&ndash;10">
+      <a href="lessons/0008-numbers-one-to-ten.html">
+        <span class="lesson-num-badge">8</span>
+        <span class="lesson-title">Numbers 1&ndash;10</span>
+      </a>
+      <span class="lesson-score" data-score="0008"></span>
+      <span class="lesson-check" data-check="0008"></span>
+    </li>
+    <li class="lesson-item" data-lesson="0009" data-href="lessons/0009-family-words.html" data-title="Family Words">
+      <a href="lessons/0009-family-words.html">
+        <span class="lesson-num-badge">9</span>
+        <span class="lesson-title">Family Words</span>
+      </a>
+      <span class="lesson-score" data-score="0009"></span>
+      <span class="lesson-check" data-check="0009"></span>
+    </li>
+    <li class="lesson-item" data-lesson="0010" data-href="lessons/0010-yes-no-questions.html" data-title="Yes/No Questions">
+      <a href="lessons/0010-yes-no-questions.html">
+        <span class="lesson-num-badge">10</span>
+        <span class="lesson-title">Yes/No Questions</span>
+      </a>
+      <span class="lesson-score" data-score="0010"></span>
+      <span class="lesson-check" data-check="0010"></span>
+    </li>
+  </ul>
+</div>
+
+<div id="reviewCard" class="review-card" style="display:none;">
+  <h3>Words Due for Review</h3>
+  <div class="review-count" id="reviewCount">0</div>
+  <p style="color:var(--muted);font-size:0.9rem;margin-top:0.5rem;">Open your most recent lesson to review vocabulary</p>
+</div>
+
+<h2>Reference</h2>
+<div class="ref-links">
+  <a href="reference/glossary.html" class="ref-link">Glossary</a>
+  <a href="reference/tone-chart.html" class="ref-link">Tone Chart</a>
+  <a href="reference/jyutping-guide.html" class="ref-link">Jyutping Guide</a>
+  <a href="reference/grammar-notes.html" class="ref-link">Grammar Notes</a>
+</div>
+
+<div style="margin-top:3rem;padding-top:1rem;border-top:1px solid var(--border);font-size:0.8rem;color:var(--muted);text-align:center;">
+  Built with the <a href="https://jyutping.org/en/learn/">Jyutping</a> romanization system.
+  Always verify with your partner &mdash; they're your best teacher.
+</div>
+
+</div><!-- end hub-content -->
+
+<script src="js/progress.js"></script>
+<script>
+(function() {
+  // Splash screen logic
+  var splash = document.getElementById('splash');
+  var content = document.getElementById('hubContent');
+  var seen = localStorage.getItem('cantonese_splash_seen');
+
+  if (seen) {
+    splash.style.display = 'none';
+    content.classList.add('show');
+  } else {
+    setTimeout(function() {
+      splash.classList.add('fade-out');
+      content.classList.add('show');
+      setTimeout(function() {
+        splash.style.display = 'none';
+        localStorage.setItem('cantonese_splash_seen', '1');
+      }, 700);
+    }, 2200);
+  }
+
+  // Populate data
+  var progress = getLessonProgress();
+  document.getElementById('progressFill').style.width = progress.percentage + '%';
+  document.getElementById('lessonsNum').textContent = progress.completed;
+  document.getElementById('wordsNum').textContent = getWordsLearned();
+  document.getElementById('streakNum').textContent = getStreak();
+
+  var next = getNextLesson();
+  var todayEl = document.getElementById('todayContent');
+  var todayCard = document.getElementById('todayCard');
+
+  if (next) {
+    var nextItem = document.querySelector('[data-lesson="' + next + '"]');
+    if (nextItem) {
+      var href = nextItem.dataset.href;
+      var title = nextItem.dataset.title;
+      var num = parseInt(next);
+      todayEl.innerHTML = '<a href="' + href + '">Lesson ' + num + ': ' + title + '</a>' +
+        '<div class="today-sub">~15 minutes</div>';
+    }
+  } else {
+    todayCard.classList.add('all-done');
+    todayEl.innerHTML = '<strong style="color:#27ae60;">All 10 lessons complete!</strong>' +
+      '<div class="today-sub">Review your vocabulary and practise with your partner.</div>';
+  }
+
+  document.querySelectorAll('.lesson-item').forEach(function(li) {
+    var id = li.dataset.lesson;
+    var data = getLessonData(id);
+    if (data && data.completed) {
+      li.classList.add('completed');
+      var check = li.querySelector('[data-check="' + id + '"]');
+      if (check) check.textContent = '✓';
+      var score = li.querySelector('[data-score="' + id + '"]');
+      if (score && data.quizScore !== undefined) {
+        score.textContent = data.quizScore + '/' + data.quizTotal;
+      }
+    } else if (id === next) {
+      li.classList.add('next');
+    }
+  });
+
+  var due = getVocabDueForReview();
+  if (due.length > 0) {
+    document.getElementById('reviewCard').style.display = 'block';
+    document.getElementById('reviewCount').textContent = due.length;
+  }
+})();
+</script>
+
+</body>
+</html>

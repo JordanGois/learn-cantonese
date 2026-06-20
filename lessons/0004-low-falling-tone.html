@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x7CB5;</text></svg>">
+<title>Lesson 4: The Low Falling Tone - Learn Cantonese</title>
+<link rel="stylesheet" href="../css/course.css">
+<script src="../js/theme.js"></script>
+<script src="../js/animations.js"></script>
+</head>
+<body>
+
+<nav class="lesson-nav">
+  <a href="0003-rising-tones.html">&larr; Lesson 3</a>
+  <a href="../index.html" class="nav-hub">Hub</a>
+  <a href="0005-all-six-tones-together.html">Lesson 5 &rarr;</a>
+</nav>
+
+<div class="lesson-header">
+  <span class="lesson-num">Lesson 4</span>
+  <h1>The Low Falling Tone</h1>
+  <p class="subtitle">The sighing tone &mdash; and how to tell it from low level</p>
+</div>
+
+<div id="ttsStatus" class="tts-status" style="display:none;"></div>
+
+<!-- 1. Recap -->
+<p>So far you know five tones: <strong>T1, T3, T6</strong> (level) and <strong>T2, T5</strong> (rising). One more to go: <strong>T4 (low falling)</strong>. After this lesson, you'll know all six Cantonese tones!</p>
+
+<!-- 2. The Sighing Tone -->
+<h2>The Sighing Tone</h2>
+<p><strong>Tone 4</strong> starts at mid-low pitch and falls to low. Think of sighing <em>"oh..."</em> in disappointment. The voice drops, like letting out a breath.</p>
+<p>The tricky part: <strong>T4 and T6 are both in the low register</strong>. T4 falls, T6 stays flat. This is the hardest distinction for beginners &mdash; but your ear will learn it with practice.</p>
+
+<!-- 3. Hear T4 -->
+<h2>Hear T4</h2>
+<div class="tone-piano">
+  <div class="piano-row falling">
+    <span class="piano-label">T4 &mdash; Low Falling</span>
+    <button class="play-btn" onclick="playFallingTone(250, 180, this)">
+      <span class="icon">&#9654;</span> Play T4
+    </button>
+  </div>
+  <div class="piano-row low">
+    <span class="piano-label">T6 &mdash; Low Level</span>
+    <button class="play-btn" onclick="playTone(180, this)">
+      <span class="icon">&#9654;</span> Play T6 (comparison)
+    </button>
+  </div>
+  <div class="piano-row high">
+    <span class="piano-label">T1 &mdash; High Level</span>
+    <button class="play-btn" onclick="playTone(350, this)">
+      <span class="icon">&#9654;</span> Play T1 (contrast)
+    </button>
+  </div>
+  <button class="play-all-btn" onclick="playFallingTone(250, 180, null); setTimeout(function(){ playTone(180, null); }, 1000);">
+    Play T4 then T6 (hear the difference)
+  </button>
+</div>
+<p class="tip">T4 starts slightly higher and slides down. T6 stays flat at the bottom. Play them back-to-back until you can hear the fall.</p>
+
+<!-- 4. Words with Tone 4 -->
+<h2>Words with Tone 4</h2>
+
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#26178;</div>
+      <div class="jyutping">si4</div>
+      <div class="english">time</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#26178;', 4)">&#128264; Hear</button>
+  </div>
+</div>
+
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#21780;</div>
+      <div class="jyutping">m4</div>
+      <div class="english">not (negation prefix)</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#21780;', 4)">&#128264; Hear</button>
+  </div>
+  <div class="note">From Lesson 1! <strong>m4</strong> goi1 &mdash; "excuse me / sorry". The "not" is a low falling tone.</div>
+</div>
+
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#21069;</div>
+      <div class="jyutping">cin4</div>
+      <div class="english">before / front</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#21069;', 4)">&#128264; Hear</button>
+  </div>
+</div>
+
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#30007;</div>
+      <div class="jyutping">naam4</div>
+      <div class="english">male</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#30007;', 4)">&#128264; Hear</button>
+  </div>
+</div>
+
+<h3>Contrast Pair: Time vs. Matter</h3>
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#26178;</div>
+      <div class="jyutping">si4</div>
+      <div class="english">time (T4 &mdash; low falling)</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#26178;', 4)">&#128264; Hear</button>
+  </div>
+</div>
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#20107;</div>
+      <div class="jyutping">si6</div>
+      <div class="english">matter / thing (T6 &mdash; low level)</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#20107;', 6)">&#128264; Hear</button>
+  </div>
+  <div class="note">si4 falls; si6 stays flat. Both are low &mdash; can you hear the difference?</div>
+</div>
+
+<!-- 5. Ear Training: Falling or Flat? -->
+<h2>Ear Training: Falling or Flat?</h2>
+<div class="ear-trainer" id="earTrainer"></div>
+
+<!-- 6. Five-Tone Sort -->
+<h2>Five-Tone Sort</h2>
+<p>Sort these words into the correct tone category. Click a word, then click the shelf where it belongs.</p>
+<div class="exercise" id="sortExercise"></div>
+
+<!-- 7. Recall Quiz -->
+<h2>Recall Quiz</h2>
+<div class="quiz" id="recallQuiz"></div>
+
+<!-- 8. Practice With Your Partner -->
+<div class="practice-box">
+  <h3>Practice With Your Partner</h3>
+  <ul>
+    <li>Ask your partner to alternate <strong>si4</strong> (time) and <strong>si6</strong> (matter). Can you hear the fall in si4 vs. the flat si6?</li>
+    <li>Practice <strong>m4 goi1</strong> with correct T4 on m4 &mdash; let the "m" sigh downward before the crisp high T1 on goi1.</li>
+    <li>Try saying all the T4 words in a row: si4, m4, cin4, naam4. Feel the sigh in each one.</li>
+  </ul>
+</div>
+
+<!-- 9. What's Next -->
+<p><strong>What's next:</strong> Lesson 5 puts <strong>all six tones together</strong> for a full integration exercise. You know them all now &mdash; time to practice telling them apart!</p>
+
+<!-- 10. Source -->
+<div class="source">
+  <strong>Sources:</strong> <a href="https://jyutping.org/en/docs/tone/">Jyutping.org</a> tone practice; EdUHK
+</div>
+
+<!-- 11. Complete button -->
+<button class="complete-btn" id="completeBtn">Mark Complete</button>
+
+<nav class="lesson-footer">
+  <a href="0003-rising-tones.html">&larr; Lesson 3: Rising Tones</a>
+  <a href="0005-all-six-tones-together.html">Lesson 5: All Six Tones Together &rarr;</a>
+</nav>
+
+<script src="../js/audio.js"></script>
+<script src="../js/vocabulary.js"></script>
+<script src="../js/progress.js"></script>
+<script src="../js/components.js"></script>
+<script>
+(function() {
+  var LESSON_ID = '0004';
+
+  // TTS status
+  showTtsStatus('ttsStatus');
+
+  // Ear Trainer
+  EarTrainerComponent(document.getElementById('earTrainer'), [
+    { key: 't4', label: 'Low Falling (T4)', toneNum: 4 },
+    { key: 't6', label: 'Low Level (T6)', toneNum: 6 }
+  ], 5);
+
+  // Five-Tone Sort
+  WordSortComponent(document.getElementById('sortExercise'),
+    [
+      { id: 'sam1',  label: 'sam1 (heart)',   correctCategory: '1' },
+      { id: 'gau2',  label: 'gau2 (nine)',    correctCategory: '2' },
+      { id: 'si4',   label: 'si4 (time)',     correctCategory: '4' },
+      { id: 'nei5',  label: 'nei5 (you)',     correctCategory: '5' },
+      { id: 'sik6',  label: 'sik6 (to eat)',  correctCategory: '6' },
+      { id: 'cin4',  label: 'cin4 (before)',  correctCategory: '4' }
+    ],
+    [
+      { id: '1', label: 'High Level (T1)',   className: 'high-zone' },
+      { id: '2', label: 'High Rising (T2)',  className: '' },
+      { id: '4', label: 'Low Falling (T4)',  className: '' },
+      { id: '5', label: 'Low Rising (T5)',   className: '' },
+      { id: '6', label: 'Low Level (T6)',    className: 'low-zone' }
+    ]
+  );
+
+  // Recall Quiz
+  var quizContainer = document.getElementById('recallQuiz');
+  QuizComponent(quizContainer, [
+    {
+      question: 'T4 sounds like...',
+      options: [
+        { text: 'A sigh, falling from mid to low', correct: true },
+        { text: 'A question, rising from low to high', correct: false },
+        { text: 'A flat hum at mid pitch', correct: false },
+        { text: 'A sharp drop from high to low', correct: false }
+      ]
+    },
+    {
+      question: 'm4 (not) is which tone?',
+      options: [
+        { text: 'T6 (low level)', correct: false },
+        { text: 'T4 (low falling)', correct: true },
+        { text: 'T3 (mid level)', correct: false },
+        { text: 'T5 (low rising)', correct: false }
+      ]
+    },
+    {
+      question: 'The hardest pair to distinguish is...',
+      options: [
+        { text: 'T1 (high level) vs T3 (mid level)', correct: false },
+        { text: 'T2 (high rising) vs T5 (low rising)', correct: false },
+        { text: 'T4 (low falling) vs T6 (low level)', correct: true },
+        { text: 'T1 (high level) vs T6 (low level)', correct: false }
+      ]
+    },
+    {
+      question: 'From Lesson 3: jyu5 (rain) is which type?',
+      options: [
+        { text: 'High rising (T2)', correct: false },
+        { text: 'Low rising (T5)', correct: true },
+        { text: 'Low falling (T4)', correct: false },
+        { text: 'Low level (T6)', correct: false }
+      ]
+    }
+  ]);
+
+  setupLessonCompletion(LESSON_ID, quizContainer, ['si4', 'm4', 'cin4', 'naam4', 'si6']);
+  addScrollProgress();
+})();
+</script>
+
+</body>
+</html>

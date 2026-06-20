@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x7CB5;</text></svg>">
+<title>Lesson 1: Tones Are Everything - Learn Cantonese</title>
+<link rel="stylesheet" href="../css/course.css">
+<script src="../js/theme.js"></script>
+<script src="../js/animations.js"></script>
+</head>
+<body>
+
+<nav class="lesson-nav">
+  <a href="../index.html">&larr; Hub</a>
+  <a href="../index.html" class="nav-hub">Learn Cantonese</a>
+  <a href="0002-three-shelves.html">Lesson 2 &rarr;</a>
+</nav>
+
+<div class="lesson-header">
+  <span class="lesson-num">Lesson 1</span>
+  <h1>Tones Are Everything</h1>
+  <p class="subtitle">The single most important thing about Cantonese</p>
+</div>
+
+<div id="ttsStatus" class="tts-status" style="display:none"></div>
+
+<!-- 1. Explanation -->
+<p>In English, pitch shows emotion. A rising voice means you are asking a question. A falling voice means you are making a statement. The <em>words</em> stay the same.</p>
+
+<p><strong>Cantonese is completely different.</strong> In Cantonese, pitch changes the word itself. The syllable "si" said six different ways produces six different words with six unrelated meanings. Get the tone wrong and you are literally saying a different word.</p>
+
+<!-- 2. The Six Tones -->
+<h2>The Six Tones</h2>
+
+<p>Every Cantonese syllable has a tone, marked by a number 1-6 after the romanisation (called <em>Jyutping</em>). Here they all are:</p>
+
+<div class="tone-grid">
+  <div class="header">Tone</div>
+  <div class="header">Contour</div>
+  <div class="header">Feel</div>
+  <div class="header">Example</div>
+
+  <div class="cell num">T1</div>
+  <div class="cell"><span class="tone-visual">--- ---</span><br>High level</div>
+  <div class="cell">Singing a high steady note</div>
+  <div class="cell"><strong>si1</strong> = poem (&#35433;)</div>
+
+  <div class="cell num">T2</div>
+  <div class="cell"><span class="tone-visual">&nbsp; &nbsp; /</span><br>High rising</div>
+  <div class="cell">Asking "Really?"</div>
+  <div class="cell"><strong>si2</strong> = history (&#21490;)</div>
+
+  <div class="cell num">T3</div>
+  <div class="cell"><span class="tone-visual">--- ---</span><br>Mid level</div>
+  <div class="cell">Normal speaking pitch</div>
+  <div class="cell"><strong>si3</strong> = try (&#35430;)</div>
+
+  <div class="cell num">T4</div>
+  <div class="cell"><span class="tone-visual">\&nbsp; &nbsp; </span><br>Low falling</div>
+  <div class="cell">Sighing "oh..."</div>
+  <div class="cell"><strong>si4</strong> = time (&#26178;)</div>
+
+  <div class="cell num">T5</div>
+  <div class="cell"><span class="tone-visual">&nbsp; &nbsp; /</span><br>Low rising</div>
+  <div class="cell">Like T2 but starting lower</div>
+  <div class="cell"><strong>si5</strong> = market (&#24066;)</div>
+
+  <div class="cell num">T6</div>
+  <div class="cell"><span class="tone-visual">--- ---</span><br>Low level</div>
+  <div class="cell">A low flat mumble</div>
+  <div class="cell"><strong>si6</strong> = matter (&#20107;)</div>
+</div>
+
+<p class="tip">Don't try to memorise all six right now. The goal for today is to understand that tones exist and to start hearing the difference between high, mid, and low. We will drill each tone pair in the lessons ahead.</p>
+
+<!-- 3. Your First Words -->
+<h2>Your First Words</h2>
+
+<p>Four phrases you can use today. Each word card shows the Jyutping romanisation, the Chinese characters, and the meaning. Press the button to hear the pitch pattern.</p>
+
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#20320;&#22909;</div>
+      <div class="jyutping">nei5 hou2</div>
+      <div class="english">Hello</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#20320;&#22909;', 5)">&#128264; Hear it</button>
+  </div>
+  <div class="note">nei5 starts low and rises (T5). hou2 rises higher (T2). Think of the bounce in an enthusiastic "Hi there!"</div>
+</div>
+
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#22810;&#35613;</div>
+      <div class="jyutping">do1 ze6</div>
+      <div class="english">Thank you (for a gift or favour)</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#22810;&#35613;', 1)">&#128264; Hear it</button>
+  </div>
+  <div class="note">do1 is high and flat (T1). ze6 drops to a low flat note (T6). High then low &mdash; like setting something down gently.</div>
+</div>
+
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#21780;&#35442;</div>
+      <div class="jyutping">m4 goi1</div>
+      <div class="english">Thank you (for service) / Excuse me</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#21780;&#35442;', 4)">&#128264; Hear it</button>
+  </div>
+  <div class="note">m4 drops low (T4), then goi1 jumps back up high (T1). Use this when someone holds the door or brings your food.</div>
+</div>
+
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#25105;&#24859;&#20320;</div>
+      <div class="jyutping">ngo5 oi3 nei5</div>
+      <div class="english">I love you</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#25105;&#24859;&#20320;', 5)">&#128264; Hear it</button>
+  </div>
+  <div class="note">ngo5 rises from low (T5), oi3 sits in the middle (T3), nei5 rises from low again (T5). A gentle wave pattern.</div>
+</div>
+
+<!-- 4. Quick Check Quiz -->
+<h2>Quick Check</h2>
+
+<p>Three quick questions to make sure the core idea landed.</p>
+
+<div class="quiz" id="quiz1"></div>
+
+<!-- 5. Practice With Your Partner -->
+<h2>Practice With Your Partner</h2>
+
+<div class="practice-box">
+  <h3>Try this tonight</h3>
+  <ol>
+    <li>Say <strong>nei5 hou2</strong> to your partner. Ask them if your tones sound right.</li>
+    <li>Use <strong>m4 goi1</strong> next time they hand you something or do you a favour.</li>
+    <li>Say <strong>ngo5 oi3 nei5</strong> before bed. Even if it sounds wobbly, they will appreciate it.</li>
+  </ol>
+  <p class="tip">Don't worry about being perfect. The goal is to start using the sounds. Your partner is the best teacher you have.</p>
+</div>
+
+<!-- 6. What's Next -->
+<h2>What's Next</h2>
+
+<p>In <a href="0002-three-shelves.html">Lesson 2: Three Shelves</a>, we zoom in on the three <em>level</em> tones (T1, T3, T6) and train your ear to tell them apart. These are the easiest group to start with because the pitch doesn't move &mdash; it just sits on a different shelf.</p>
+
+<!-- 7. Sources -->
+<div class="source">
+  <strong>Sources:</strong>
+  <a href="https://jyutping.org/en/docs/tone/">Jyutping.org learner guide</a> &middot;
+  <a href="https://corpus.eduhk.hk/cantonese/eng/chapter3/3-0.html">EdUHK &mdash; Six Tones of Cantonese</a> &middot;
+  <a href="https://migaku.com/blog/language-fun/cantonese-tones">Migaku &mdash; Cantonese Tones Guide</a>
+</div>
+
+<!-- 8. Complete Button -->
+<button class="complete-btn" id="completeBtn">Mark Complete</button>
+
+<div class="lesson-footer">
+  <a href="../index.html">&larr; Course Hub</a>
+  <a href="0002-three-shelves.html">Lesson 2: Three Shelves &rarr;</a>
+</div>
+
+<script src="../js/audio.js"></script>
+<script src="../js/vocabulary.js"></script>
+<script src="../js/progress.js"></script>
+<script src="../js/components.js"></script>
+<script>
+(function() {
+  // Show TTS status
+  showTtsStatus('ttsStatus');
+
+  var quizContainer = document.getElementById('quiz1');
+  QuizComponent(quizContainer, [
+    {
+      question: 'If you say "si" with the wrong tone, what happens?',
+      options: [
+        { text: 'People hear a different word entirely', correct: true },
+        { text: 'It sounds a bit odd but people understand', correct: false },
+        { text: 'Nothing, tones are optional in Cantonese', correct: false }
+      ]
+    },
+    {
+      question: 'How many tones does Cantonese have?',
+      options: [
+        { text: 'Four, like Mandarin', correct: false },
+        { text: 'Six, numbered 1-6', correct: true },
+        { text: 'Two: high and low', correct: false }
+      ]
+    },
+    {
+      question: 'In "nei5", what does the 5 tell you?',
+      options: [
+        { text: 'The syllable has five letters', correct: false },
+        { text: 'It is the fifth word in the sentence', correct: false },
+        { text: 'The tone (pitch pattern) to use', correct: true }
+      ]
+    }
+  ]);
+
+  setupLessonCompletion('0001', quizContainer, ['nei5', 'hou2', 'do1', 'ze6', 'm4', 'goi1', 'ngo5', 'oi3']);
+  addScrollProgress();
+})();
+</script>
+
+</body>
+</html>

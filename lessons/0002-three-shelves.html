@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x7CB5;</text></svg>">
+<title>Lesson 2: Three Shelves - Learn Cantonese</title>
+<link rel="stylesheet" href="../css/course.css">
+<script src="../js/theme.js"></script>
+<script src="../js/animations.js"></script>
+</head>
+<body>
+
+<nav class="lesson-nav">
+  <a href="0001-tones-and-first-words.html">&larr; Lesson 1</a>
+  <a href="../index.html" class="nav-hub">Learn Cantonese</a>
+  <a href="0003-rising-tones.html">Lesson 3 &rarr;</a>
+</nav>
+
+<div class="lesson-header">
+  <span class="lesson-num">Lesson 2</span>
+  <h1>Three Shelves</h1>
+  <p class="subtitle">Hear the level tones &mdash; then learn to tell them apart</p>
+</div>
+
+<div id="ttsStatus" class="tts-status" style="display:none"></div>
+
+<!-- 1. Recap -->
+<p>In <a href="0001-tones-and-first-words.html">Lesson 1</a> you met all six Cantonese tones. Today we zoom in on the three <strong>level tones</strong> &mdash; the ones where your pitch stays steady, no rise or fall. Think of them as <em>three shelves on a wall</em>: one high, one in the middle, one low.</p>
+
+<p>If you can hear which shelf a syllable sits on, you already have half the tone system sorted. The other three tones (rising and falling) will come later.</p>
+
+<!-- 2. Hear The Three Shelves -->
+<h2>Hear The Three Shelves</h2>
+
+<p>Click each button to hear a pure tone at that shelf's pitch. Listen for the height difference &mdash; all three are flat and steady, but they sit at different levels.</p>
+
+<div class="tone-piano">
+  <div class="piano-row high">
+    <span class="piano-label" style="color:var(--high-color)">T1 &mdash; High shelf</span>
+    <button class="play-btn" onclick="playTone(350, this)"><span class="icon">&#9654;</span> 350 Hz</button>
+  </div>
+  <div class="piano-row mid">
+    <span class="piano-label" style="color:var(--mid-color)">T3 &mdash; Mid shelf</span>
+    <button class="play-btn" onclick="playTone(250, this)"><span class="icon">&#9654;</span> 250 Hz</button>
+  </div>
+  <div class="piano-row low">
+    <span class="piano-label" style="color:var(--low-color)">T6 &mdash; Low shelf</span>
+    <button class="play-btn" onclick="playTone(180, this)"><span class="icon">&#9654;</span> 180 Hz</button>
+  </div>
+  <button class="play-all-btn" onclick="playAllShelves(this)">&#9654; Play all three (high &rarr; mid &rarr; low)</button>
+</div>
+
+<!-- 3. Hear Real Words -->
+<h2>Hear Real Words</h2>
+
+<p>Now hear the shelves in actual Cantonese words. Each word sits on one shelf and stays there.</p>
+
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#19977;</div>
+      <div class="jyutping">saam1</div>
+      <div class="english">three &mdash; high shelf anchor</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#19977;', 1)">&#128264; Hear it</button>
+  </div>
+  <div class="note">Bright, high, and flat. This is your reference point for T1.</div>
+</div>
+
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#22235;</div>
+      <div class="jyutping">sei3</div>
+      <div class="english">four &mdash; mid shelf anchor</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#22235;', 3)">&#128264; Hear it</button>
+  </div>
+  <div class="note">Relaxed, middle pitch. Your normal speaking voice probably lives here.</div>
+</div>
+
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#20108;</div>
+      <div class="jyutping">ji6</div>
+      <div class="english">two &mdash; low shelf anchor</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#20108;', 6)">&#128264; Hear it</button>
+  </div>
+  <div class="note">Low and flat, like the bottom of a sigh. This is your T6 reference.</div>
+</div>
+
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#39135;</div>
+      <div class="jyutping">sik6</div>
+      <div class="english">to eat &mdash; low shelf</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#39135;', 6)">&#128264; Hear it</button>
+  </div>
+  <div class="note">Same low flat pitch as ji6. Both sit on the bottom shelf.</div>
+</div>
+
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#24515;</div>
+      <div class="jyutping">sam1</div>
+      <div class="english">heart &mdash; high shelf</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#24515;', 1)">&#128264; Hear it</button>
+  </div>
+  <div class="note">Same bright high pitch as saam1. Both sit on the top shelf.</div>
+</div>
+
+<!-- 4. Ear Training -->
+<h2>Ear Training: Name That Shelf</h2>
+
+<p>A random level tone will play. Your job is to say which shelf it sits on. Try to get 5 in a row.</p>
+
+<div class="ear-trainer" id="earTrainer"></div>
+
+<!-- 5. Sort The Words -->
+<h2>Sort The Words</h2>
+
+<p>Click a word to select it, then click the shelf it belongs on. When all words are placed, press Check.</p>
+
+<div class="exercise" id="sortExercise"></div>
+
+<!-- 6. Recall Quiz -->
+<h2>Recall Quiz</h2>
+
+<div class="quiz" id="quiz2"></div>
+
+<!-- 7. Practice With Your Partner -->
+<h2>Practice With Your Partner</h2>
+
+<div class="practice-box">
+  <h3>Shelf drill</h3>
+  <ol>
+    <li>Say <strong>saam1</strong> (three), <strong>sei3</strong> (four), <strong>ji6</strong> (two) one after the other. Try to make the pitch clearly different each time.</li>
+    <li>Ask your partner to say a number (1-4) in Cantonese and see if you can tell which shelf it sits on.</li>
+    <li>When eating dinner, try saying <strong>sik6</strong> (eat) on the right low shelf. Your partner will tell you if it sounds right.</li>
+  </ol>
+  <p class="tip">The three shelves are the foundation. Once you can hear high vs mid vs low, the rising and falling tones are just movement between shelves.</p>
+</div>
+
+<!-- 8. What's Next -->
+<h2>What's Next</h2>
+
+<p>In <a href="0003-rising-tones.html">Lesson 3: Rising Tones</a>, we add movement. You will learn T2 (high rising) and T5 (low rising) &mdash; tones that travel <em>between</em> shelves instead of sitting still on one.</p>
+
+<!-- 9. Sources -->
+<div class="source">
+  <strong>Sources:</strong>
+  <a href="https://jyutping.org/en/docs/tone/">Jyutping.org learner guide</a> &middot;
+  <a href="https://corpus.eduhk.hk/cantonese/eng/chapter3/3-0.html">EdUHK &mdash; Six Tones of Cantonese</a> &middot;
+  <a href="https://migaku.com/blog/language-fun/cantonese-tones">Migaku &mdash; Cantonese Tones Guide</a>
+</div>
+
+<!-- 10. Complete Button -->
+<button class="complete-btn" id="completeBtn">Mark Complete</button>
+
+<div class="lesson-footer">
+  <a href="0001-tones-and-first-words.html">&larr; Lesson 1: Tones Are Everything</a>
+  <a href="0003-rising-tones.html">Lesson 3: Rising Tones &rarr;</a>
+</div>
+
+<script src="../js/audio.js"></script>
+<script src="../js/vocabulary.js"></script>
+<script src="../js/progress.js"></script>
+<script src="../js/components.js"></script>
+<script>
+(function() {
+  // Show TTS status
+  showTtsStatus('ttsStatus');
+
+  // Play all three shelves in sequence
+  window.playAllShelves = function(btn) {
+    playTone(350, btn, 0.7);
+    setTimeout(function() { playTone(250, null, 0.7); }, 900);
+    setTimeout(function() { playTone(180, null, 0.7); }, 1800);
+  };
+
+  // Ear Trainer
+  var earContainer = document.getElementById('earTrainer');
+  EarTrainerComponent(earContainer, [
+    { key: 'high', label: 'High (T1)', toneNum: 1 },
+    { key: 'mid',  label: 'Mid (T3)',  toneNum: 3 },
+    { key: 'low',  label: 'Low (T6)',  toneNum: 6 }
+  ], 5);
+
+  // Word Sort
+  var sortContainer = document.getElementById('sortExercise');
+  WordSortComponent(sortContainer, [
+    { id: 'fu1',  label: 'fu1 (husband)',  correctCategory: '1', hz: 350 },
+    { id: 'si6',  label: 'si6 (matter)',   correctCategory: '6', hz: 180 },
+    { id: 'gwo3', label: 'gwo3 (pass)',    correctCategory: '3', hz: 250 },
+    { id: 'sam1', label: 'sam1 (heart)',    correctCategory: '1', hz: 350 },
+    { id: 'sik6', label: 'sik6 (eat)',     correctCategory: '6', hz: 180 },
+    { id: 'si3',  label: 'si3 (try)',      correctCategory: '3', hz: 250 }
+  ], [
+    { id: '1', label: 'High Shelf (T1)', className: 'high-zone' },
+    { id: '3', label: 'Mid Shelf (T3)',  className: 'mid-zone' },
+    { id: '6', label: 'Low Shelf (T6)',  className: 'low-zone' }
+  ]);
+
+  // Quiz
+  var quizContainer = document.getElementById('quiz2');
+  QuizComponent(quizContainer, [
+    {
+      question: 'Which shelf does sik6 (eat) sit on?',
+      options: [
+        { text: 'High shelf (T1)', correct: false },
+        { text: 'Mid shelf (T3)', correct: false },
+        { text: 'Low shelf (T6)', correct: true }
+      ]
+    },
+    {
+      question: 'Which word is a bright high pitch meaning "three"?',
+      options: [
+        { text: 'ji6', correct: false },
+        { text: 'saam1', correct: true },
+        { text: 'sei3', correct: false }
+      ]
+    },
+    {
+      question: 'How do you tell T1 apart from T3 if both are flat?',
+      options: [
+        { text: 'T1 is longer than T3', correct: false },
+        { text: 'Both are flat, but T1 sits at a higher pitch than T3', correct: true },
+        { text: 'T1 has a slight rise at the end', correct: false }
+      ]
+    },
+    {
+      question: 'From Lesson 1: what does ngo5 oi3 nei5 mean?',
+      options: [
+        { text: 'Excuse me', correct: false },
+        { text: 'Thank you', correct: false },
+        { text: 'I love you', correct: true }
+      ]
+    }
+  ]);
+
+  setupLessonCompletion('0002', quizContainer, ['saam1', 'sei3', 'ji6', 'sik6', 'sam1', 'fu1']);
+  addScrollProgress();
+})();
+</script>
+
+</body>
+</html>

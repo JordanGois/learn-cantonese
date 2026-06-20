@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x7CB5;</text></svg>">
+<title>Lesson 3: Rising Tones - Learn Cantonese</title>
+<link rel="stylesheet" href="../css/course.css">
+<script src="../js/theme.js"></script>
+<script src="../js/animations.js"></script>
+</head>
+<body>
+
+<nav class="lesson-nav">
+  <a href="0002-three-shelves.html">&larr; Lesson 2</a>
+  <a href="../index.html" class="nav-hub">Hub</a>
+  <a href="0004-low-falling-tone.html">Lesson 4 &rarr;</a>
+</nav>
+
+<div class="lesson-header">
+  <span class="lesson-num">Lesson 3</span>
+  <h1>Rising Tones</h1>
+  <p class="subtitle">The tones that go up &mdash; and why they're different</p>
+</div>
+
+<div id="ttsStatus" class="tts-status" style="display:none;"></div>
+
+<!-- 1. Recap -->
+<p>In Lessons 1 and 2, you learned the three <strong>level tones</strong>: T1 (high), T3 (mid), and T6 (low). They sit on shelves &mdash; high, mid, low &mdash; and stay flat.</p>
+<p>Today we add the two <strong>rising tones</strong>: T2 (high rising) and T5 (low rising). Same direction &mdash; up &mdash; but different starting points.</p>
+
+<!-- 2. Two Types of Rise -->
+<h2>Two Types of Rise</h2>
+<p><strong>Tone 2 (high rising)</strong> starts at mid pitch and rises to high. Think of someone surprised, asking <em>"Really?"</em> in English. The voice lifts from the middle to the top.</p>
+<p><strong>Tone 5 (low rising)</strong> starts at low pitch and rises to mid. Like a questioning <em>"hmm?"</em> &mdash; lower energy than T2. The voice lifts from the bottom, but only reaches the middle.</p>
+<p>The key difference: same direction (up), but <strong>different starting points</strong>. T2 starts higher and ends higher than T5.</p>
+
+<!-- 3. Hear The Two Rises -->
+<h2>Hear The Two Rises</h2>
+<div class="tone-piano">
+  <div class="piano-row rising">
+    <span class="piano-label">T2 &mdash; High Rising</span>
+    <button class="play-btn" onclick="playRisingTone(250, 350, this)">
+      <span class="icon">&#9654;</span> Play T2
+    </button>
+  </div>
+  <div class="piano-row rising">
+    <span class="piano-label">T5 &mdash; Low Rising</span>
+    <button class="play-btn" onclick="playRisingTone(180, 250, this)">
+      <span class="icon">&#9654;</span> Play T5
+    </button>
+  </div>
+  <div class="piano-row high">
+    <span class="piano-label">T1 &mdash; High Level</span>
+    <button class="play-btn" onclick="playTone(350, this)">
+      <span class="icon">&#9654;</span> Play T1 (comparison)
+    </button>
+  </div>
+  <button class="play-all-btn" onclick="playRisingTone(250, 350, null); setTimeout(function(){ playRisingTone(180, 250, null); }, 1000);">
+    Play both rises (T2 then T5)
+  </button>
+</div>
+<p class="tip">Listen for where the tone starts. T2 begins in the middle and soars up; T5 begins low and only reaches the middle.</p>
+
+<!-- 4. Words with Rising Tones -->
+<h2>Words with Rising Tones</h2>
+
+<h3>Tone 2 (High Rising)</h3>
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#21490;</div>
+      <div class="jyutping">si2</div>
+      <div class="english">history</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#21490;', 2)">&#128264; Hear</button>
+  </div>
+</div>
+
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#20061;</div>
+      <div class="jyutping">gau2</div>
+      <div class="english">nine</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#20061;', 2)">&#128264; Hear</button>
+  </div>
+</div>
+
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#22909;</div>
+      <div class="jyutping">hou2</div>
+      <div class="english">good</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#22909;', 2)">&#128264; Hear</button>
+  </div>
+  <div class="note">From Lesson 1! nei5 <strong>hou2</strong> &mdash; the "good" in "hello" is a high rising tone.</div>
+</div>
+
+<h3>Tone 5 (Low Rising)</h3>
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#24066;</div>
+      <div class="jyutping">si5</div>
+      <div class="english">market</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#24066;', 5)">&#128264; Hear</button>
+  </div>
+</div>
+
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#20320;</div>
+      <div class="jyutping">nei5</div>
+      <div class="english">you</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#20320;', 5)">&#128264; Hear</button>
+  </div>
+  <div class="note">From Lesson 1! <strong>nei5</strong> hou2 &mdash; "you" is a low rising tone.</div>
+</div>
+
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#38632;</div>
+      <div class="jyutping">jyu5</div>
+      <div class="english">rain</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#38632;', 5)">&#128264; Hear</button>
+  </div>
+</div>
+
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#28961;</div>
+      <div class="jyutping">mou5</div>
+      <div class="english">not have / none</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#28961;', 5)">&#128264; Hear</button>
+  </div>
+</div>
+
+<h3>Minimal Pair: Buy vs. Sell</h3>
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#36023;</div>
+      <div class="jyutping">maai5</div>
+      <div class="english">to buy (T5 &mdash; low rising)</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#36023;', 5)">&#128264; Hear</button>
+  </div>
+</div>
+<div class="word-card">
+  <div class="top-row">
+    <div>
+      <div class="canto">&#36067;</div>
+      <div class="jyutping">mai6</div>
+      <div class="english">to sell (T6 &mdash; low level)</div>
+    </div>
+    <button class="hear-btn" onclick="speakCantonese('&#36067;', 6)">&#128264; Hear</button>
+  </div>
+  <div class="note">Rising vs. flat in the low register &mdash; the difference between buying and selling!</div>
+</div>
+
+<!-- 5. Ear Training: Which Rise? -->
+<h2>Ear Training: Which Rise?</h2>
+<div class="ear-trainer" id="earTrainer"></div>
+
+<!-- 6. Matching Exercise -->
+<h2>Matching Exercise</h2>
+<p>Match the Jyutping to its English meaning.</p>
+<div class="exercise" id="matchingExercise"></div>
+
+<!-- 7. Recall Quiz -->
+<h2>Recall Quiz</h2>
+<div class="quiz" id="recallQuiz"></div>
+
+<!-- 8. Practice With Your Partner -->
+<div class="practice-box">
+  <h3>Practice With Your Partner</h3>
+  <ul>
+    <li>Say <strong>nei5 hou2</strong> focusing on the two rises. Feel nei5 rise from low-to-mid, then hou2 rise from mid-to-high.</li>
+    <li>Ask your partner to say <strong>gau2</strong> (nine) and <strong>jyu5</strong> (rain) &mdash; listen for the different starting points of each rise.</li>
+    <li>Practice <strong>mou5</strong> in context: say <em>"ngo5 mou5"</em> (I don't have). Both syllables are T5 &mdash; two low rises in a row.</li>
+  </ul>
+</div>
+
+<!-- 9. What's Next -->
+<p><strong>What's next:</strong> Lesson 4 adds the <strong>low falling tone (T4)</strong> &mdash; the last missing piece. After that, you'll know all six Cantonese tones.</p>
+
+<!-- 10. Source -->
+<div class="source">
+  <strong>Sources:</strong> EdUHK tone chapter; <a href="https://jyutping.org/en/docs/tone/">Jyutping.org</a>
+</div>
+
+<!-- 11. Complete button -->
+<button class="complete-btn" id="completeBtn">Mark Complete</button>
+
+<nav class="lesson-footer">
+  <a href="0002-three-shelves.html">&larr; Lesson 2: Three Shelves</a>
+  <a href="0004-low-falling-tone.html">Lesson 4: Low Falling Tone &rarr;</a>
+</nav>
+
+<script src="../js/audio.js"></script>
+<script src="../js/vocabulary.js"></script>
+<script src="../js/progress.js"></script>
+<script src="../js/components.js"></script>
+<script>
+(function() {
+  var LESSON_ID = '0003';
+
+  // TTS status
+  showTtsStatus('ttsStatus');
+
+  // Ear Trainer
+  EarTrainerComponent(document.getElementById('earTrainer'), [
+    { key: 't2', label: 'High Rising (T2)', toneNum: 2 },
+    { key: 't5', label: 'Low Rising (T5)', toneNum: 5 }
+  ], 5);
+
+  // Matching Exercise
+  MatchingComponent(document.getElementById('matchingExercise'), [
+    { left: 'si2', right: 'history' },
+    { left: 'gau2', right: 'nine' },
+    { left: 'jyu5', right: 'rain' },
+    { left: 'mou5', right: 'not have' },
+    { left: 'maai5', right: 'to buy' }
+  ]);
+
+  // Recall Quiz
+  var quizContainer = document.getElementById('recallQuiz');
+  QuizComponent(quizContainer, [
+    {
+      question: 'T2 and T5 both rise, but they differ in...',
+      options: [
+        { text: 'Starting pitch (T2 starts higher)', correct: true },
+        { text: 'Duration (T2 is longer)', correct: false },
+        { text: 'Volume (T5 is louder)', correct: false },
+        { text: 'They sound identical', correct: false }
+      ]
+    },
+    {
+      question: 'nei5 (you) is which tone?',
+      options: [
+        { text: 'T2 (high rising)', correct: false },
+        { text: 'T5 (low rising)', correct: true },
+        { text: 'T1 (high level)', correct: false },
+        { text: 'T6 (low level)', correct: false }
+      ]
+    },
+    {
+      question: 'From Lesson 2: What shelf does saam1 sit on?',
+      options: [
+        { text: 'High shelf (T1)', correct: true },
+        { text: 'Mid shelf (T3)', correct: false },
+        { text: 'Low shelf (T6)', correct: false },
+        { text: 'Rising (T2)', correct: false }
+      ]
+    },
+    {
+      question: 'maai5 means "to buy". What tone would "to sell" (mai6) be?',
+      options: [
+        { text: 'T5 (low rising)', correct: false },
+        { text: 'T2 (high rising)', correct: false },
+        { text: 'T6 (low level)', correct: true },
+        { text: 'T1 (high level)', correct: false }
+      ]
+    }
+  ]);
+
+  setupLessonCompletion(LESSON_ID, quizContainer, ['si2', 'gau2', 'hou2', 'si5', 'nei5', 'jyu5', 'mou5', 'maai5', 'mai6']);
+  addScrollProgress();
+})();
+</script>
+
+</body>
+</html>

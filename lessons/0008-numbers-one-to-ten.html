@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x7CB5;</text></svg>">
+<title>Lesson 8: Numbers 1–10 - Learn Cantonese</title>
+<link rel="stylesheet" href="../css/course.css">
+<script src="../js/theme.js"></script>
+<script src="../js/animations.js"></script>
+</head>
+<body>
+
+<nav class="lesson-nav">
+  <a href="0007-pronouns-and-to-be.html">&larr; Lesson 7</a>
+  <a href="../index.html" class="nav-hub">Hub</a>
+  <a href="0009-family-words.html">Lesson 9 &rarr;</a>
+</nav>
+
+<div class="lesson-header">
+  <span class="lesson-num">Lesson 8</span>
+  <h1>Numbers 1&ndash;10</h1>
+  <p class="subtitle">Count in Cantonese &mdash; and drill your tones at the same time</p>
+</div>
+
+<div id="ttsStatus" class="tts-status" style="display:none;"></div>
+
+<!-- 1. Intro -->
+<p>Numbers are the best tone drill in Cantonese. Every number has a different tone, so counting 1&ndash;10 exercises almost all six tones. You already know what the numbers mean, so you can focus entirely on getting the tones right.</p>
+
+<!-- 2. The Numbers -->
+<h2>The Numbers</h2>
+
+<div class="tone-grid" style="grid-template-columns: auto auto auto auto auto;">
+  <div class="header">#</div>
+  <div class="header">Jyutping</div>
+  <div class="header">Tone</div>
+  <div class="header">Characters</div>
+  <div class="header">Hear</div>
+
+  <div class="cell num">1</div>
+  <div class="cell"><strong>jat1</strong></div>
+  <div class="cell">T1 (high level)</div>
+  <div class="cell">&#19968;</div>
+  <div class="cell"><button class="hear-btn" onclick="speakCantonese('&#19968;', 1)">&#128264;</button></div>
+
+  <div class="cell num">2</div>
+  <div class="cell"><strong>ji6</strong></div>
+  <div class="cell">T6 (low level)</div>
+  <div class="cell">&#20108;</div>
+  <div class="cell"><button class="hear-btn" onclick="speakCantonese('&#20108;', 6)">&#128264;</button></div>
+
+  <div class="cell num">3</div>
+  <div class="cell"><strong>saam1</strong></div>
+  <div class="cell">T1 (high level)</div>
+  <div class="cell">&#19977;</div>
+  <div class="cell"><button class="hear-btn" onclick="speakCantonese('&#19977;', 1)">&#128264;</button></div>
+
+  <div class="cell num">4</div>
+  <div class="cell"><strong>sei3</strong></div>
+  <div class="cell">T3 (mid level)</div>
+  <div class="cell">&#22235;</div>
+  <div class="cell"><button class="hear-btn" onclick="speakCantonese('&#22235;', 3)">&#128264;</button></div>
+
+  <div class="cell num">5</div>
+  <div class="cell"><strong>ng5</strong></div>
+  <div class="cell">T5 (low rising)</div>
+  <div class="cell">&#20116;</div>
+  <div class="cell"><button class="hear-btn" onclick="speakCantonese('&#20116;', 5)">&#128264;</button></div>
+
+  <div class="cell num">6</div>
+  <div class="cell"><strong>luk6</strong></div>
+  <div class="cell">T6 (low level)</div>
+  <div class="cell">&#20845;</div>
+  <div class="cell"><button class="hear-btn" onclick="speakCantonese('&#20845;', 6)">&#128264;</button></div>
+
+  <div class="cell num">7</div>
+  <div class="cell"><strong>cat1</strong></div>
+  <div class="cell">T1 (high level)</div>
+  <div class="cell">&#19971;</div>
+  <div class="cell"><button class="hear-btn" onclick="speakCantonese('&#19971;', 1)">&#128264;</button></div>
+
+  <div class="cell num">8</div>
+  <div class="cell"><strong>baat3</strong></div>
+  <div class="cell">T3 (mid level)</div>
+  <div class="cell">&#20843;</div>
+  <div class="cell"><button class="hear-btn" onclick="speakCantonese('&#20843;', 3)">&#128264;</button></div>
+
+  <div class="cell num">9</div>
+  <div class="cell"><strong>gau2</strong></div>
+  <div class="cell">T2 (high rising)</div>
+  <div class="cell">&#20061;</div>
+  <div class="cell"><button class="hear-btn" onclick="speakCantonese('&#20061;', 2)">&#128264;</button></div>
+
+  <div class="cell num">10</div>
+  <div class="cell"><strong>sap6</strong></div>
+  <div class="cell">T6 (low level)</div>
+  <div class="cell">&#21313;</div>
+  <div class="cell"><button class="hear-btn" onclick="speakCantonese('&#21313;', 6)">&#128264;</button></div>
+</div>
+
+<button class="play-all-btn" id="countBtn" onclick="countOneToTen()">Count 1&ndash;10</button>
+
+<!-- 3. Tone Patterns in Numbers -->
+<h2>Tone Patterns in Numbers</h2>
+
+<p>Look at which tones appear in the basic numbers:</p>
+
+<ul>
+  <li><strong>T1 (high level):</strong> 1, 3, 7 &mdash; three of them!</li>
+  <li><strong>T2 (high rising):</strong> 9 &mdash; just one</li>
+  <li><strong>T3 (mid level):</strong> 4, 8 &mdash; two</li>
+  <li><strong>T5 (low rising):</strong> 5 &mdash; just one</li>
+  <li><strong>T6 (low level):</strong> 2, 6, 10 &mdash; three of them!</li>
+</ul>
+
+<p class="tip">No T4 (low falling) in the basic numbers! The high and low level tones dominate. When you count, you are bouncing between the top and bottom shelves with a few stops in the middle.</p>
+
+<!-- 4. Number Dictation -->
+<h2>Number Dictation</h2>
+<p>A number will play. Listen to the tone and pick which number it is. Try to get 5 in a row!</p>
+<div class="ear-trainer" id="numberDictation"></div>
+
+<!-- 5. Number Sort by Tone -->
+<h2>Sort Numbers by Tone</h2>
+<p>Click a number, then click the tone shelf where it belongs.</p>
+<div class="exercise" id="numberSort"></div>
+
+<!-- 6. Recall Quiz -->
+<h2>Recall Quiz</h2>
+<div class="quiz" id="recallQuiz"></div>
+
+<!-- 7. Practice With Your Partner -->
+<div class="practice-box">
+  <h3>Practice With Your Partner</h3>
+  <ul>
+    <li>Count 1&ndash;10 out loud with your partner. Focus on hitting the tones.</li>
+    <li>Have your partner say a random number &mdash; repeat it back with the correct tone.</li>
+    <li>Exchange phone numbers in Cantonese, one digit at a time.</li>
+    <li>Count objects around the house: jat1, ji6, saam1...</li>
+  </ul>
+</div>
+
+<!-- 8. What's Next -->
+<p><strong>What's next:</strong> <a href="0009-family-words.html">Lesson 9</a> teaches family words &mdash; essential for meeting your partner's family.</p>
+
+<!-- 9. Source -->
+<div class="source">
+  <strong>Sources:</strong> <a href="https://corpus.eduhk.hk/cantonese/eng/chapter3/3-0.html">EdUHK &mdash; Cantonese Tones</a>, <a href="https://jyutping.org/en/docs/tone/">Jyutping.org &mdash; Tone Practice</a>
+</div>
+
+<!-- 10. Complete button -->
+<button class="complete-btn" id="completeBtn">Mark Complete</button>
+
+<nav class="lesson-footer">
+  <a href="0007-pronouns-and-to-be.html">&larr; Lesson 7: Pronouns &amp; "To Be"</a>
+  <a href="0009-family-words.html">Lesson 9: Family Words &rarr;</a>
+</nav>
+
+<script src="../js/audio.js"></script>
+<script src="../js/vocabulary.js"></script>
+<script src="../js/progress.js"></script>
+<script src="../js/components.js"></script>
+<script>
+(function() {
+  var LESSON_ID = '0008';
+
+  // TTS status
+  showTtsStatus('ttsStatus');
+
+  // Number data for dictation exercise
+  var NUMBERS = [
+    { num: 1, jyutping: 'jat1', tone: 1, char: '一' },
+    { num: 2, jyutping: 'ji6',  tone: 6, char: '二' },
+    { num: 3, jyutping: 'saam1', tone: 1, char: '三' },
+    { num: 4, jyutping: 'sei3', tone: 3, char: '四' },
+    { num: 5, jyutping: 'ng5',  tone: 5, char: '五' },
+    { num: 6, jyutping: 'luk6', tone: 6, char: '六' },
+    { num: 7, jyutping: 'cat1', tone: 1, char: '七' },
+    { num: 8, jyutping: 'baat3', tone: 3, char: '八' },
+    { num: 9, jyutping: 'gau2', tone: 2, char: '九' },
+    { num: 10, jyutping: 'sap6', tone: 6, char: '十' }
+  ];
+
+  // Count 1-10 button: plays each number in sequence
+  window.countOneToTen = function() {
+    var btn = document.getElementById('countBtn');
+    btn.disabled = true;
+    btn.textContent = 'Playing...';
+    var i = 0;
+    function playNext() {
+      if (i >= NUMBERS.length) {
+        btn.disabled = false;
+        btn.textContent = 'Count 1–10';
+        return;
+      }
+      var n = NUMBERS[i];
+      speakCantonese(n.char, n.tone);
+      i++;
+      setTimeout(playNext, 1000);
+    }
+    playNext();
+  };
+
+  // Number Dictation - custom ear trainer for numbers
+  (function() {
+    var container = document.getElementById('numberDictation');
+    // Use a subset of 6 numbers for the drill
+    var drillNumbers = [
+      NUMBERS[0], // jat1 (1)
+      NUMBERS[1], // ji6 (2)
+      NUMBERS[2], // saam1 (3)
+      NUMBERS[3], // sei3 (4)
+      NUMBERS[4], // ng5 (5)
+      NUMBERS[8]  // gau2 (9)
+    ];
+
+    var currentNumber = null;
+    var correct = 0;
+    var total = 0;
+    var streak = 0;
+    var targetStreak = 5;
+
+    var html = '<h3>A number will play. Which one is it?</h3>' +
+      '<p>Click "Play number" to hear a random number, then guess. Try to get ' + targetStreak + ' in a row.</p>' +
+      '<div class="ear-controls">' +
+      '<button class="ear-play" id="numPlayBtn">&#9654; Play number</button>';
+
+    drillNumbers.forEach(function(n) {
+      html += '<button class="guess-btn" data-guess="' + n.num + '">' + n.num + ' (' + n.jyutping + ')</button>';
+    });
+
+    html += '<button class="hear-btn" id="numReplayBtn" style="display:none;">&#128257; Replay</button></div>' +
+      '<div class="ear-score">Score: <span id="numCorrect">0</span> / <span id="numTotal">0</span>' +
+      ' &nbsp; Streak: <span class="streak" id="numStreak">0</span></div>';
+
+    container.innerHTML = html;
+
+    container.querySelector('#numPlayBtn').onclick = function() {
+      var idx = Math.floor(Math.random() * drillNumbers.length);
+      currentNumber = drillNumbers[idx];
+      speakCantonese(currentNumber.char, currentNumber.tone);
+      container.querySelectorAll('.guess-btn').forEach(function(b) {
+        b.disabled = false;
+        b.classList.remove('correct-guess', 'wrong-guess');
+      });
+      container.querySelector('#numReplayBtn').style.display = 'inline-block';
+    };
+
+    container.querySelector('#numReplayBtn').onclick = function() {
+      if (currentNumber) speakCantonese(currentNumber.char, currentNumber.tone);
+    };
+
+    container.querySelectorAll('.guess-btn').forEach(function(btn) {
+      btn.onclick = function() {
+        if (!currentNumber) return;
+        total++;
+        container.querySelectorAll('.guess-btn').forEach(function(b) { b.disabled = true; });
+
+        if (parseInt(btn.dataset.guess) === currentNumber.num) {
+          btn.classList.add('correct-guess');
+          correct++;
+          streak++;
+        } else {
+          btn.classList.add('wrong-guess');
+          container.querySelectorAll('.guess-btn').forEach(function(b) {
+            if (parseInt(b.dataset.guess) === currentNumber.num) b.classList.add('correct-guess');
+          });
+          streak = 0;
+        }
+
+        container.querySelector('#numCorrect').textContent = correct;
+        container.querySelector('#numTotal').textContent = total;
+        container.querySelector('#numStreak').textContent = streak;
+
+        if (streak >= targetStreak) {
+          var scoreEl = container.querySelector('.ear-score');
+          if (!scoreEl.querySelector('.success-msg')) {
+            var msg = document.createElement('strong');
+            msg.className = 'success-msg';
+            msg.style.color = '#27ae60';
+            msg.innerHTML = ' &nbsp; &#10003; ' + targetStreak + ' in a row! Well done.';
+            scoreEl.appendChild(msg);
+          }
+        }
+      };
+    });
+  })();
+
+  // Number Sort by Tone
+  WordSortComponent(document.getElementById('numberSort'),
+    [
+      { id: 'jat1',  label: 'jat1 (1)',  correctCategory: '1' },
+      { id: 'ji6',   label: 'ji6 (2)',   correctCategory: '6' },
+      { id: 'saam1', label: 'saam1 (3)', correctCategory: '1' },
+      { id: 'sei3',  label: 'sei3 (4)',  correctCategory: '3' },
+      { id: 'ng5',   label: 'ng5 (5)',   correctCategory: '5' },
+      { id: 'luk6',  label: 'luk6 (6)',  correctCategory: '6' },
+      { id: 'gau2',  label: 'gau2 (9)',  correctCategory: '2' }
+    ],
+    [
+      { id: '1', label: 'T1 High Level',   className: 'high' },
+      { id: '2', label: 'T2 High Rising',  className: 'rising' },
+      { id: '3', label: 'T3 Mid Level',    className: 'mid' },
+      { id: '5', label: 'T5 Low Rising',   className: 'rising' },
+      { id: '6', label: 'T6 Low Level',    className: 'low' }
+    ]
+  );
+
+  // Recall Quiz
+  var quizContainer = document.getElementById('recallQuiz');
+  QuizComponent(quizContainer, [
+    {
+      question: 'What tone is ng5 (five)?',
+      options: [
+        { text: 'T1 (high level)', correct: false },
+        { text: 'T3 (mid level)', correct: false },
+        { text: 'T5 (low rising)', correct: true },
+        { text: 'T6 (low level)', correct: false }
+      ]
+    },
+    {
+      question: 'Which three numbers are all T1 (high level)?',
+      options: [
+        { text: '2, 6, 10', correct: false },
+        { text: '1, 3, 7', correct: true },
+        { text: '4, 8, 9', correct: false },
+        { text: '1, 5, 9', correct: false }
+      ]
+    },
+    {
+      question: 'From Lesson 7: How do you say "they" in Cantonese?',
+      options: [
+        { text: 'ngo5 dei6', correct: false },
+        { text: 'nei5 dei6', correct: false },
+        { text: 'keoi5 dei6', correct: true },
+        { text: 'keoi5 ge3', correct: false }
+      ]
+    },
+    {
+      question: 'Your partner says a low, flat number. Which could it be?',
+      options: [
+        { text: '1, 3, or 7', correct: false },
+        { text: '4 or 8', correct: false },
+        { text: '5 or 9', correct: false },
+        { text: '2, 6, or 10', correct: true }
+      ]
+    }
+  ]);
+
+  setupLessonCompletion(LESSON_ID, quizContainer, [
+    'jat1', 'ji6', 'saam1', 'sei3', 'ng5', 'luk6', 'cat1', 'baat3', 'gau2', 'sap6'
+  ]);
+  addScrollProgress();
+})();
+</script>
+
+</body>
+</html>

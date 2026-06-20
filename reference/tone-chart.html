@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x7CB5;</text></svg>">
+<title>Cantonese Tone Chart - Learn Cantonese</title>
+<link rel="stylesheet" href="../css/course.css">
+<style>
+  /* Pitch diagram */
+  .pitch-diagram {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    margin: 2rem 0;
+    border-left: 2px solid var(--fg);
+    border-bottom: 2px solid var(--fg);
+  }
+  .pitch-label {
+    position: absolute;
+    left: -50px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    width: 45px;
+    text-align: right;
+  }
+  .pitch-label.high { top: 30px; }
+  .pitch-label.mid { top: 120px; }
+  .pitch-label.low { top: 210px; }
+  .pitch-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-top: 1px dashed #ddd;
+  }
+  .pitch-line.high { top: 40px; }
+  .pitch-line.mid { top: 130px; }
+  .pitch-line.low { top: 220px; }
+
+  /* Tone lines drawn with SVG */
+  .pitch-diagram svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .tone-line {
+    stroke-width: 3;
+    fill: none;
+    stroke-linecap: round;
+  }
+  .tone-label-svg {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  /* Tone table */
+  .tone-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+  }
+  .tone-table th {
+    background: var(--fg);
+    color: var(--bg);
+    padding: 0.5rem 0.6rem;
+    text-align: left;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .tone-table td {
+    padding: 0.6rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+  }
+  .tone-table tr:hover { background: #f9f9f5; }
+  .tone-number {
+    font-weight: 700;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.1rem;
+  }
+  .contour-visual {
+    font-family: monospace;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+  }
+
+  /* Framework box */
+  .framework-box {
+    background: var(--highlight);
+    border-left: 3px solid var(--accent);
+    padding: 1.2rem;
+    margin: 1.5rem 0;
+  }
+  .framework-box h3 {
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+  }
+
+  /* Tips */
+  .tip-card {
+    background: var(--blue-bg);
+    border: 1px solid var(--blue-border);
+    padding: 1rem 1.2rem;
+    margin: 0.8rem 0;
+    border-radius: 4px;
+  }
+  .tip-card strong {
+    color: var(--blue-text);
+  }
+</style>
+<script src="../js/theme.js"></script>
+<script src="../js/animations.js"></script>
+</head>
+<body>
+
+<nav class="lesson-nav">
+  <a href="../index.html">&larr; Hub</a>
+  <a href="../index.html" class="nav-hub">Learn Cantonese</a>
+  <a href="jyutping-guide.html">Jyutping Guide &rarr;</a>
+</nav>
+
+<div class="lesson-header">
+  <h1>Cantonese Tone Chart</h1>
+  <p class="subtitle">Visual reference for all six tones</p>
+</div>
+
+<!-- Visual pitch diagram -->
+<h2>Pitch Diagram</h2>
+
+<p>Each tone occupies a position on three pitch shelves (high, mid, low). Level tones stay flat; rising and falling tones move between shelves.</p>
+
+<div class="pitch-diagram">
+  <span class="pitch-label high">High</span>
+  <span class="pitch-label mid">Mid</span>
+  <span class="pitch-label low">Low</span>
+  <div class="pitch-line high"></div>
+  <div class="pitch-line mid"></div>
+  <div class="pitch-line low"></div>
+
+  <svg viewBox="0 0 600 280" preserveAspectRatio="xMidYMid meet">
+    <!-- T1: High Level -->
+    <line x1="30" y1="40" x2="120" y2="40" class="tone-line" stroke="var(--high-color)" />
+    <text x="75" y="28" class="tone-label-svg" fill="var(--high-color)" text-anchor="middle">T1</text>
+
+    <!-- T2: High Rising (mid to high) -->
+    <line x1="140" y1="130" x2="230" y2="40" class="tone-line" stroke="#2980b9" />
+    <text x="185" y="28" class="tone-label-svg" fill="#2980b9" text-anchor="middle">T2</text>
+
+    <!-- T3: Mid Level -->
+    <line x1="250" y1="130" x2="340" y2="130" class="tone-line" stroke="var(--mid-color)" />
+    <text x="295" y="118" class="tone-label-svg" fill="var(--mid-color)" text-anchor="middle">T3</text>
+
+    <!-- T4: Low Falling (mid to low) -->
+    <line x1="360" y1="130" x2="450" y2="220" class="tone-line" stroke="#8e44ad" />
+    <text x="405" y="118" class="tone-label-svg" fill="#8e44ad" text-anchor="middle">T4</text>
+
+    <!-- T5: Low Rising (low to mid) -->
+    <line x1="470" y1="220" x2="540" y2="130" class="tone-line" stroke="#2980b9" />
+    <text x="505" y="250" class="tone-label-svg" fill="#2980b9" text-anchor="middle">T5</text>
+
+    <!-- T6: Low Level -->
+    <line x1="555" y1="220" x2="595" y2="220" class="tone-line" stroke="var(--low-color)" />
+    <text x="575" y="250" class="tone-label-svg" fill="var(--low-color)" text-anchor="middle">T6</text>
+  </svg>
+</div>
+
+<!-- Detailed tone table -->
+<h2>Tone Reference Table</h2>
+
+<table class="tone-table">
+  <thead>
+    <tr>
+      <th>Tone</th>
+      <th>#</th>
+      <th>Pitch</th>
+      <th>Direction</th>
+      <th>Mnemonic</th>
+      <th>Anchor Word</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>High Level</td>
+      <td><span class="tone-number">1</span></td>
+      <td>High</td>
+      <td><span class="contour-visual">&mdash;&mdash;&mdash;</span></td>
+      <td>Singing "la!"</td>
+      <td>saam1 (&#19977;, three)</td>
+      <td><button class="hear-btn" onclick="playToneByNumber(1, this)">&#128264; Hear</button></td>
+    </tr>
+    <tr>
+      <td>High Rising</td>
+      <td><span class="tone-number">2</span></td>
+      <td>Mid &rarr; High</td>
+      <td><span class="contour-visual">&#x2571;</span></td>
+      <td>"Really?"</td>
+      <td>gau2 (&#20061;, nine)</td>
+      <td><button class="hear-btn" onclick="playToneByNumber(2, this)">&#128264; Hear</button></td>
+    </tr>
+    <tr>
+      <td>Mid Level</td>
+      <td><span class="tone-number">3</span></td>
+      <td>Mid</td>
+      <td><span class="contour-visual">&mdash;&mdash;&mdash;</span></td>
+      <td>Normal voice</td>
+      <td>sei3 (&#22235;, four)</td>
+      <td><button class="hear-btn" onclick="playToneByNumber(3, this)">&#128264; Hear</button></td>
+    </tr>
+    <tr>
+      <td>Low Falling</td>
+      <td><span class="tone-number">4</span></td>
+      <td>Mid &rarr; Low</td>
+      <td><span class="contour-visual">&#x2572;</span></td>
+      <td>Sighing "oh..."</td>
+      <td>si4 (&#26178;, time)</td>
+      <td><button class="hear-btn" onclick="playToneByNumber(4, this)">&#128264; Hear</button></td>
+    </tr>
+    <tr>
+      <td>Low Rising</td>
+      <td><span class="tone-number">5</span></td>
+      <td>Low &rarr; Mid</td>
+      <td><span class="contour-visual">&#x2571;</span></td>
+      <td>Soft "hmm?"</td>
+      <td>nei5 (&#20320;, you)</td>
+      <td><button class="hear-btn" onclick="playToneByNumber(5, this)">&#128264; Hear</button></td>
+    </tr>
+    <tr>
+      <td>Low Level</td>
+      <td><span class="tone-number">6</span></td>
+      <td>Low</td>
+      <td><span class="contour-visual">&mdash;&mdash;&mdash;</span></td>
+      <td>Bored mumble</td>
+      <td>ji6 (&#20108;, two)</td>
+      <td><button class="hear-btn" onclick="playToneByNumber(6, this)">&#128264; Hear</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Three Shelves Framework -->
+<h2>The Framework</h2>
+
+<div class="framework-box">
+  <h3>Three Shelves, Three Movements</h3>
+  <p>All six tones fit onto three pitch shelves:</p>
+  <ul>
+    <li><strong>High shelf:</strong> T1 sits here flat. T2 rises up to here.</li>
+    <li><strong>Mid shelf:</strong> T3 sits here flat. T4 starts here and falls. T5 rises up to here.</li>
+    <li><strong>Low shelf:</strong> T6 sits here flat. T4 falls down to here. T5 starts here.</li>
+  </ul>
+  <p>Three tones are level (T1, T3, T6). Three tones move (T2 rises, T4 falls, T5 rises). Learn the shelves first, then the movements.</p>
+</div>
+
+<!-- Confusing pairs -->
+<h2>Tricky Pairs</h2>
+
+<div class="tip-card">
+  <strong>T1 vs T3 &mdash; Same shape, different height.</strong>
+  Both are flat and level. T1 is on the high shelf; T3 is on the mid shelf. Compare: saam1 (three) vs sei3 (four). If you can hum a high note and a mid note, you can tell these apart.
+</div>
+
+<div class="tip-card">
+  <strong>T2 vs T5 &mdash; Same direction, different starting point.</strong>
+  Both rise. T2 starts at mid and climbs to high. T5 starts at low and climbs to mid. Compare: gau2 (nine) vs nei5 (you). T2 sounds brighter and more energetic; T5 sounds gentler.
+</div>
+
+<div class="tip-card">
+  <strong>T4 vs T6 &mdash; Both are low, but one moves.</strong>
+  T4 starts mid and falls to low. T6 is already low and stays there. Compare: si4 (time) vs ji6 (two). T4 has a sighing quality; T6 just sits.
+</div>
+
+<div class="source">
+  See also: <a href="jyutping-guide.html">Jyutping Guide</a> &middot; <a href="glossary.html">Glossary</a>
+</div>
+
+<div class="lesson-footer">
+  <a href="../index.html">&larr; Course Hub</a>
+  <a href="jyutping-guide.html">Jyutping Guide &rarr;</a>
+</div>
+
+<script src="../js/audio.js"></script>
+
+</body>
+</html>
